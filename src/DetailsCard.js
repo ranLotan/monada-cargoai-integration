@@ -1,10 +1,29 @@
 import React from 'react';
 
 // MUI imports
+import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Table from '@mui/material/Table';
+import TableRow from '@mui/material/TableRow';
+import TableCell from '@mui/material/TableCell';
+import TableBody from '@mui/material/TableBody';
+import TableHead from '@mui/material/TableHead';
+import TableContainer from '@mui/material/TableContainer';
+import { yellow } from '@mui/material/colors';
+
+// Font Awesome import
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar, faGripDots } from '@fortawesome/pro-solid-svg-icons';
+import { faGlobe } from '@fortawesome/pro-light-svg-icons';
+
+// Monada imports
+import SupplierLogos from '@monada-ai/monada-shipping-companies-logos';
 
 // Generic imports
 import _ from 'lodash';
+import { useDrag } from 'react-dnd'
+import CurrencyList from 'currency-list';
 
 function DetailsCard(props) {
     const { rate, toggleFavorite, isFavorite, emphasize } = props;
@@ -21,7 +40,7 @@ function DetailsCard(props) {
     return (
         <Box>
             <Box style={{ display: 'flex', alignItems: 'center' }}>
-                <SupplierIcons size='large' organization={rate.supplier.organization} />
+                <SupplierLogos size={SupplierLogos.size.LARGE} organization={rate.supplier.organization} />
                 <Box sx={{ flex: 1, marginLeft: '12px' }}>
                     <Box sx={{ fontWeight: '800', fontSize: '15px' }}>
                         {originPort.name} ({originPort.code}) -> {destinationPort.name} ({destinationPort.code})
@@ -132,7 +151,7 @@ function OkargoSingleFieldDetails(props) {
                 {field.title}
             </Box>
             <Box sx={{ fontSize: '13px', fontWeight: emphasize ? '800' : '400', marginTop: '3px' }}>
-                {currencyToText(value.currency, true, value.val.toLocaleString(undefined, {minimumFractionDigits: 2}))}
+                {CurrencyList.get(value.currency).symbol}{value.val.toLocaleString(undefined, {minimumFractionDigits: 2})}
             </Box>
             <Box sx={{ fontSize: '12px', fontWeight: emphasize ? '800' : '400', marginTop: '3px', marginBottom: '12px'}}>
                 {field.linkType === 'peritem' ? '/ product' : ''}
