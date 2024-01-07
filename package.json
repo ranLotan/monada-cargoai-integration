@@ -1,0 +1,22 @@
+{
+  "name": "monada-okargo-integration",
+  "version": "0.0.1",
+  "description": "All that is needed to integrate Okargo into monada (server & client code)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "monada-okargo-integration"
+  },
+  "author": "Yoav Amit",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "msw": "^2.0.12"
+  },
+  "dependencies": {
+    "axios": "^1.6.5"
+  }
+}
