@@ -1,6 +1,6 @@
 const { setupServer } = require('msw/node');
 const { http, HttpResponse } = require('msw');
-const { Server: OkargoServer, ConfigurationErrorException, InvalidTokenException } = require('../src/server.js');
+const { Server: OkargoServer, ConfigurationErrorException, InvalidTokenException } = require('../src/server/index.js');
 const OKARGO_RESPONSE = require('./OKARGO_RESPONSE.json');
 const EXPECTED_RESPONSE = require('./EXPECTED_RESPONSE.json');
 
