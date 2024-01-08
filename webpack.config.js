@@ -3,16 +3,16 @@ const pkg = require('./package.json');
 const path = require('path');
 const libraryName= pkg.name;
 module.exports = {
-    entry: path.join(__dirname, "./src/index.js"),
+    entry: path.join(__dirname, "./src/client/index.js"),
     plugins: [
     ],
     mode: 'production',
     output: {
-        path: path.join(__dirname, './dist'),
+        path: path.join(__dirname, './dist/client'),
         filename: 'index.js',
         library: libraryName,
         libraryTarget: 'umd',
-        publicPath: '/dist/',
+        publicPath: '/dist/client',
         umdNamedDefine: true
     },
     module: {

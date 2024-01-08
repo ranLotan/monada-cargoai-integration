@@ -4,6 +4,7 @@ const OKARGO_PLATFORMS = require('./OKARGO_PLATFORMS.json');
 
 function ConfigurationErrorException() {}
 function InvalidTokenException() {}
+function TooManyRequestsException() {}
 
 function Server({ configuration = {}, serverUri = 'https://app.okargo.com/api/Export/v2/GetOnlineCarrierOffers' } = {}) {
     const { token, platforms } = configuration;
@@ -23,7 +24,7 @@ function Server({ configuration = {}, serverUri = 'https://app.okargo.com/api/Ex
                     origin: { code: sourcePort.id },
                     destination: { code: destinationPort.id },
                     dateBegin: new Date(dateBegin).toISOString(),
-                    dateEnd: new Date(new Date(dateEnd).setUTCHours(0, 0, 0, 0)).toISOString(),
+                    dateEnd: new Date(dateEnd).toISOString(),
                     ratesFetcher: OKARGO_PLATFORMS[platform].code,
                 }, {
                     headers: { Authorization: `Bearer ${token}` }
@@ -32,7 +33,7 @@ function Server({ configuration = {}, serverUri = 'https://app.okargo.com/api/Ex
             })));
         } catch (e) {
             if (e.response.status === 429) {
-                throw new Error('too-many-requests');
+                throw new TooManyRequestsException();
             } else if (e.response.status === 401) {
                 throw new InvalidTokenException();
             } else {
@@ -114,4 +115,4 @@ const CONVERT_PRODUCT_TYPE = {
     '40\' HC Reefer': { containerType: 'Rf', sizeTypes: [ { sizeTypeId: 6, name: '40RF' } ] },
 }
 
-module.exports =  { Server, ConfigurationErrorException, InvalidTokenException };
+module.exports = { Server, ConfigurationErrorException, InvalidTokenException, TooManyRequestsException };
