@@ -16,7 +16,7 @@ export default {
 };
 
 export const Primary = {
-    name: 'I am the primary',
+    name: 'Primary',
     render: () => {
         const [ favorites, setFavorites ] = useState(false);
 

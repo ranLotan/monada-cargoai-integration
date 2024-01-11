@@ -68,16 +68,16 @@ function DetailsCard(props) {
                     Expiration: <b>{expiration}</b>
                 </Box>
                 <Box>
-                    Size & Type: <b>{rate.product}</b>
+                    Size & Type: <b>{rate.product.type}{rate.product.dangerous ? ' (Dangerous)' : ''}</b>
                 </Box>
             </Box>
-            {rate.form.sections.map((section, sectionIndex) => {
+            {rate.offer.sections.map(section => {
                 return (
                     <Box key={section.title} sx={{ marginTop: '12px' }}>
                         <Box sx={{ fontWeight: 800, fontSize: '15px'}}>{section.title}</Box>
                         <Box sx={{ display: 'flex', marginTop: '12px', flexWrap: 'wrap' }}>
-                            {section.fields.map((field, fieldIndex) => {
-                                const value = rate.values.sections[sectionIndex][fieldIndex];
+                            {section.offers[0].fields.map(field => {
+                                const value = _.values(field.values)[0];
                                 return (
                                     <OkargoSingleFieldDetails key={field.id} rate={rate} field={field} value={value} emphasize={!!(emphasize || []).find(e => e.rateId === rate.id && e.fieldId === field.id)}/>
                                 )
@@ -143,7 +143,7 @@ function OkargoSingleFieldDetails(props) {
         })
     }))
 
-    if ((field.type !== 'number') || (!value)) return null;
+    if ((field.type !== 'per-unit') && (field.type !== 'per-unit-type') && (field.type !== 'flat') && (field.type !== 'custom')) return null;
 
     return (
         <Paper ref={drag} sx={{ cursor: 'move', fontWeight: emphasize ? '800' : '400', display: 'flex', flexDirection: 'column', padding: '6px', textAlign: 'center', margin: '0px 12px 12px 0px', width: '140px', minWidth: '140px', marginBottom: '12px' }}>
@@ -151,11 +151,12 @@ function OkargoSingleFieldDetails(props) {
                 {field.title}
             </Box>
             <Box sx={{ fontSize: '13px', fontWeight: emphasize ? '800' : '400', marginTop: '3px' }}>
-                {CurrencyList.get(value.currency).symbol}{value.val.toLocaleString(undefined, {minimumFractionDigits: 2})}
+                {CurrencyList.get(value.currency).symbol}{value.value.toLocaleString(undefined, {minimumFractionDigits: 2})}
             </Box>
             <Box sx={{ fontSize: '12px', fontWeight: emphasize ? '800' : '400', marginTop: '3px', marginBottom: '12px'}}>
-                {field.linkType === 'peritem' ? '/ product' : ''}
-                {field.linkType === 'flat' ? '/ shipment' : ''}
+                {field.type === 'per-unit' || field.type === 'per-unit-type' ? '/ product' : ''}
+                {field.type === 'flat' ? '/ shipment' : ''}
+                {field.type === 'custom' ? `/ ${field.multiplierText}` : ''}
             </Box>
             <Box sx={{ fontSize: '12px', fontWeight: emphasize ? '800' : '400', marginTop: '3px', marginBottom: '12px' }}>
                 <FontAwesomeIcon icon={faGripDots} />

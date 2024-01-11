@@ -4,6 +4,9 @@ const { Server: OkargoServer, ConfigurationErrorException, InvalidTokenException
 const OKARGO_RESPONSE = require('./OKARGO_RESPONSE.json');
 const EXPECTED_RESPONSE = require('./EXPECTED_RESPONSE.json');
 
+let id = 100;
+function uuidv4() { return '' + id++ };
+
 const server = setupServer(...[
     http.post('http://localhost:9999/api/Export/v2/GetOnlineCarrierOffers', ({ request }) => {
         if (request.headers.get('authorization') !== 'Bearer TOKEN') {
@@ -32,7 +35,7 @@ test('[Task] Main task returns exception if invalid token', async () => {
 });
 
 test('[Task] Main task works', async () => {
-    const server = new OkargoServer({ configuration: { token: 'TOKEN', platforms: [] }, serverUri: 'http://localhost:9999/api/Export/v2/GetOnlineCarrierOffers' });
+    const server = new OkargoServer({ configuration: { token: 'TOKEN', platforms: [] }, serverUri: 'http://localhost:9999/api/Export/v2/GetOnlineCarrierOffers', uuidv4 });
     const response = await run(server);
     expect(response).toEqual(EXPECTED_RESPONSE);
 });
@@ -41,7 +44,7 @@ async function run(server) {
     return server.run({
         sourcePort: { id: 'PTLEI' },
         destinationPort: { id: 'BRNVT' },
-        products: [{ product: { type: '20\' Dry', quantity: 1 }}],
+        products: [{ type: '20\' Dry', quantity: 1 }],
         dateBegin: '2024-01-01',
         dateEnd: '2024-02-01',
         platform: '5'

@@ -37,6 +37,7 @@ module.exports = {
         '@fortawesome/react-fontawesome': '@fortawesome/react-fontawesome',
         '@monada-ai/monada-shipping-companies-logos': '@monada-ai/monada-shipping-companies-logos',
         '@mui': '@mui',
+        '@mui/lab': '@mui/lab',
         '@mui/material': '@mui/material',
         'axios': 'axios',
         'currency-list': 'currency-list',

@@ -12,6 +12,12 @@
             "organization": "MSC",
             "uniqueId": "MSC"
         },
+        "product": 
+        {
+            "id": "100",
+            "type": "20' Dry", 
+            "quantity": 1 
+        },
         "attributes": {
             "okargoOffer": {
                 "chargeSet": {
@@ -1347,492 +1353,436 @@
                 }
             }
         },
-        "validFrom": "2024-1-7",
-        "form": {
-            "title": "Okargo Import",
-            "type": "supplier",
-            "transportationMethods": [
-                "air"
-            ],
-            "sections": [
-                {
-                    "title": "Freight",
-                    "type": "general",
-                    "defaultCurrency": "EUR",
-                    "fields": [
-                        {
-                            "id": "Freight-40",
-                            "title": "FRT",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Freight-6",
-                            "title": "BAF",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Freight-87",
-                            "title": "ESO",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Freight-17",
-                            "title": "CSS",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Freight-283",
-                            "title": "ETS",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Freight-40",
-                            "title": "FRT",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Freight-6",
-                            "title": "BAF",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Freight-87",
-                            "title": "ESO",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Freight-17",
-                            "title": "CSS",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Freight-283",
-                            "title": "ETS",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Freight-40",
-                            "title": "FRT",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Freight-6",
-                            "title": "BAF",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Freight-87",
-                            "title": "ESO",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Freight-17",
-                            "title": "CSS",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Freight-283",
-                            "title": "ETS",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        }
-                    ]
-                },
-                {
-                    "title": "Destination",
-                    "type": "general",
-                    "defaultCurrency": "BRL",
-                    "fields": [
-                        {
-                            "id": "Destination-230",
-                            "title": "THC",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Destination-228",
-                            "title": "SPS",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Destination-22",
-                            "title": "DOC",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "flat"
-                        },
-                        {
-                            "id": "Destination-213",
-                            "title": "ALF",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Destination-230",
-                            "title": "THC",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Destination-228",
-                            "title": "SPS",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Destination-213",
-                            "title": "ALF",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Destination-230",
-                            "title": "THC",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Destination-228",
-                            "title": "SPS",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Destination-213",
-                            "title": "ALF",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        }
-                    ]
-                },
-                {
-                    "title": "Origin",
-                    "type": "general",
-                    "defaultCurrency": "EUR",
-                    "fields": [
-                        {
-                            "id": "Origin-230",
-                            "title": "THC",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Origin-22",
-                            "title": "DOC",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Origin-227",
-                            "title": "SFC",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Origin-228",
-                            "title": "SPS",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Origin-230",
-                            "title": "THC",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Origin-22",
-                            "title": "DOC",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Origin-227",
-                            "title": "SFC",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Origin-228",
-                            "title": "SPS",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Origin-230",
-                            "title": "THC",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Origin-22",
-                            "title": "DOC",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Origin-227",
-                            "title": "SFC",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        },
-                        {
-                            "id": "Origin-228",
-                            "title": "SPS",
-                            "type": "number",
-                            "postfix": "[currency]",
-                            "variables": [],
-                            "linkType": "peritem"
-                        }
-                    ]
-                }
-            ]
-        },
-        "values": {
+        "offer": {
+            "validFrom": "2024-1-7",
             "validUntil": "2024-1-17",
             "transitTime": 26,
-            "sections": [
-                [
-                    {
-                        "val": 1100,
-                        "currency": "EUR"
+            "sections": [{
+                "id": "138",
+                "title": "Freight",
+                "offers": [{
+                    "id": "139",
+                    "fields": [{
+                        "id": "101",
+                        "title": "FRT",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 1100,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 161,
-                        "currency": "EUR"
+                        "id": "110",
+                        "title": "BAF",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 161,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 23,
-                        "currency": "EUR"
+                        "id": "111",
+                        "title": "ESO",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 23,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 9,
-                        "currency": "EUR"
+                        "id": "112",
+                        "title": "CSS",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 9,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 15,
-                        "currency": "EUR"
+                        "id": "113",
+                        "title": "ETS",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 15,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 1850,
-                        "currency": "EUR"
+                        "id": "114",
+                        "title": "FRT",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 1850,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 322,
-                        "currency": "EUR"
+                        "id": "122",
+                        "title": "BAF",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 322,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 23,
-                        "currency": "EUR"
+                        "id": "123",
+                        "title": "ESO",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 23,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 9,
-                        "currency": "EUR"
+                        "id": "124",
+                        "title": "CSS",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 9,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 30,
-                        "currency": "EUR"
+                        "id": "125",
+                        "title": "ETS",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 30,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 1850,
-                        "currency": "EUR"
+                        "id": "126",
+                        "title": "FRT",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 1850,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 322,
-                        "currency": "EUR"
+                        "id": "134",
+                        "title": "BAF",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 322,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 23,
-                        "currency": "EUR"
+                        "id": "135",
+                        "title": "ESO",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 23,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 9,
-                        "currency": "EUR"
+                        "id": "136",
+                        "title": "CSS",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 9,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 30,
-                        "currency": "EUR"
-                    }
-                ],
-                [
-                    {
-                        "val": 806,
-                        "currency": "BRL"
+                        "id": "137",
+                        "title": "ETS",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 30,
+                                "currency": "EUR"
+                            }
+                        }
+                    }]
+                }]
+            }, {
+                "title": "Destination",
+                "id": "140",
+                "offers": [{
+                    "id": "141",
+                    "fields": [{
+                        "id": "102",
+                        "title": "THC",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 806,
+                                "currency": "BRL"
+                            }
+                        }
                     },
                     {
-                        "val": 30,
-                        "currency": "BRL"
+                        "id": "103",
+                        "title": "SPS",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 30,
+                                "currency": "BRL"
+                            }
+                        }
                     },
                     {
-                        "val": 595,
-                        "currency": "BRL"
+                        "id": "104",
+                        "title": "DOC",
+                        "type": "flat",
+                        "values": {
+                            "flat": {
+                                "value": 595,
+                                "currency": "BRL"
+                            }
+                        }
                     },
                     {
-                        "val": 126,
-                        "currency": "BRL"
+                        "id": "105",
+                        "title": "ALF",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 126,
+                                "currency": "BRL"
+                            }
+                        }
                     },
                     {
-                        "val": 806,
-                        "currency": "BRL"
+                        "id": "115",
+                        "title": "THC",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 806,
+                                "currency": "BRL"
+                            }
+                        }
                     },
                     {
-                        "val": 30,
-                        "currency": "BRL"
+                        "id": "116",
+                        "title": "SPS",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 30,
+                                "currency": "BRL"
+                            }
+                        }
                     },
                     {
-                        "val": 197,
-                        "currency": "BRL"
+                        "id": "117",
+                        "title": "ALF",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 197,
+                                "currency": "BRL"
+                            }
+                        }
                     },
                     {
-                        "val": 806,
-                        "currency": "BRL"
+                        "id": "127",
+                        "title": "THC",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 806,
+                                "currency": "BRL"
+                            }
+                        }
                     },
                     {
-                        "val": 30,
-                        "currency": "BRL"
+                        "id": "128",
+                        "title": "SPS",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 30,
+                                "currency": "BRL"
+                            }
+                        }
                     },
                     {
-                        "val": 197,
-                        "currency": "BRL"
-                    }
-                ],
-                [
-                    {
-                        "val": 200,
-                        "currency": "EUR"
+                        "id": "129",
+                        "title": "ALF",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 197,
+                                "currency": "BRL"
+                            }
+                        }
+                    }]
+                }]
+            }, {
+                "title": "Origin",
+                "id": "142",
+                "offers": [{
+                    "id": "143",
+                    "fields": [{
+                        "id": "106",
+                        "title": "THC",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 200,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 52,
-                        "currency": "EUR"
+                        "id": "107",
+                        "title": "DOC",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 52,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 5,
-                        "currency": "EUR"
+                        "id": "108",
+                        "title": "SFC",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 5,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 15,
-                        "currency": "EUR"
+                        "id": "109",
+                        "title": "SPS",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 15,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 200,
-                        "currency": "EUR"
+                        "id": "118",
+                        "title": "THC",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 200,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 52,
-                        "currency": "EUR"
+                        "id": "119",
+                        "title": "DOC",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 52,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 5,
-                        "currency": "EUR"
+                        "id": "120",
+                        "title": "SFC",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 5,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 15,
-                        "currency": "EUR"
+                        "id": "121",
+                        "title": "SPS",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 15,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 200,
-                        "currency": "EUR"
+                        "id": "130",
+                        "title": "THC",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 200,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 52,
-                        "currency": "EUR"
+                        "id": "131",
+                        "title": "DOC",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 52,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 5,
-                        "currency": "EUR"
+                        "id": "132",
+                        "title": "SFC",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 5,
+                                "currency": "EUR"
+                            }
+                        }
                     },
                     {
-                        "val": 15,
-                        "currency": "EUR"
-                    }
-                ]
-            ]
+                        "id": "133",
+                        "title": "SPS",
+                        "type": "per-unit",
+                        "values": {
+                            "100": {
+                                "value": 15,
+                                "currency": "EUR"
+                            }
+                        }
+                    }]
+                }]
+            }]
         }
     }
 ]

@@ -1,6 +1,6 @@
 {
     "name": "@monada-ai/monada-okargo-integration",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "All that is needed to integrate Okargo into monada (server & client code)",
     "main": "./dist/",
     "publishConfig": {
@@ -26,6 +26,7 @@
         "@fortawesome/pro-solid-svg-icons": "^6.5.1",
         "@fortawesome/react-fontawesome": "^0.2.0",
         "@monada-ai/monada-shipping-companies-logos": "*",
+        "@mui/lab": "^5.0.0-alpha.159",
         "@mui/material": "^5.15.3",
         "@storybook/addon-essentials": "^7.6.7",
         "@storybook/addon-interactions": "^7.6.7",
@@ -58,6 +59,7 @@
         "@fortawesome/react-fontawesome": "^0.2.0",
         "@monada-ai/monada-shipping-companies-logos": "*",
         "@mui/material": "^5.15.3",
+        "@mui/lab": "^5.0.0-alpha.159",
         "axios": "^1.6.5",
         "currency-list": "^1.0.8",
         "lodash": "^4.17.21",

@@ -1,12 +1,13 @@
 const _ = require('lodash');
 const axios = require('axios');
+const _uuidv4 = require('uuid').v4;
 const OKARGO_PLATFORMS = require('./OKARGO_PLATFORMS.json');
 
 function ConfigurationErrorException() {}
 function InvalidTokenException() {}
 function TooManyRequestsException() {}
 
-function Server({ configuration = {}, serverUri = 'https://app.okargo.com/api/Export/v2/GetOnlineCarrierOffers' } = {}) {
+function Server({ configuration = {}, serverUri = 'https://app.okargo.com/api/Export/v2/GetOnlineCarrierOffers', uuidv4 = _uuidv4 } = {}) {
     const { token, platforms } = configuration;
 
     if (!token || !platforms) {
@@ -45,30 +46,24 @@ function Server({ configuration = {}, serverUri = 'https://app.okargo.com/api/Ex
 
         // Create monada rate structure from return values
         const ret = _.flatten(offers.map(({ product, carrier, offers }) => offers.map(offer => {
+            const productId = uuidv4();
             const dateBegin = new Date(offer.chargeSet.dateBegin);
             const quotValidity = new Date(offer.chargeSet.quotValidity);
             const charges = _.filter(offer.chargeSet.charges, charge => charge.chargeType !== 'Source' || charge.type !== 'Incl');
 
             const fields = charges.map(charge => ({ 
-                id: `${charge.application}-${charge.chargeNameId}`,
+                id: uuidv4(),
                 title: charge.chargeName, 
-                type: 'number', 
-                postfix: '[currency]', 
-                sectionType: 'general', 
-                linkType: charge.unit === 'Specific' ? 'peritem' : 'flat', 
+                type: charge.unit === 'Specific' ? 'per-unit' : 'flat', 
                 sectionTitle: charge.application, 
-                val: charge.amount || 0, currency: 
-                charge.currency || 'USD', variables: [] 
+                values: {
+                    [charge.unit === 'Specific' ? productId : 'flat']: { value: charge.amount || 0, currency: charge.currency || 'USD' }
+                }
             }));
 
             const fieldsGrouped = _.groupBy(fields, f => f.sectionTitle);
 
-            const sections = _(fieldsGrouped).mapValues(v => ({ title: v[0].sectionTitle, type: v[0].sectionType, defaultCurrency: v[0].currency, fields: v.map(vv => _.pick(vv, ['id', 'title', 'type', 'postfix', 'variables', 'linkType' ])) })).values().value();
-
-            const values = _(fieldsGrouped).mapValues(v => {
-                if (v[0].sectionType === 'peritem') return [ v.map(vv => _.pick(vv, ['val', 'currency'])) ];
-                return v.map(vv => _.pick(vv, ['val', 'currency']));
-            }).values().value();
+            const sections = _(fieldsGrouped).mapValues(v => ({ id: uuidv4(), title: v[0].sectionTitle, offers: [{ id: uuidv4(), fields: v.map(vv => _.pick(vv, ['id', 'title', 'type', 'values' ])) }] })).values().value();
 
             return {
                 id: `okargo-${offer.chargeSet.chargeSetId}`,
@@ -82,14 +77,17 @@ function Server({ configuration = {}, serverUri = 'https://app.okargo.com/api/Ex
                 attributes: {
                     okargoOffer: offer,
                 },
-                product: product.type,
-                validFrom: `${dateBegin.getFullYear()}-${dateBegin.getMonth() + 1}-${dateBegin.getDate()}`,
-                dangerous: product.dangerous,
-                form: { title: 'Okargo Import', type: 'supplier', transportationMethods: ['air'], sections },
-                values: {
+                product: {
+                    id: productId,
+                    type: product.type,
+                    dangerous: product.dangerous,
+                    quantity: 1,
+                },
+                offer: {
+                    validFrom: `${dateBegin.getFullYear()}-${dateBegin.getMonth() + 1}-${dateBegin.getDate()}`,
                     validUntil: `${quotValidity.getFullYear()}-${quotValidity.getMonth() + 1}-${quotValidity.getDate()}`,
                     transitTime: offer.chargeSet.transitTime || 0,
-                    sections: values,
+                    sections
                 }
             }
         })));
