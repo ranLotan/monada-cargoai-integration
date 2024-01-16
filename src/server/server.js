@@ -49,6 +49,7 @@ function Server({ configuration = {}, serverUri = 'https://app.okargo.com/api/Ex
             const productId = uuidv4();
             const dateBegin = new Date(offer.chargeSet.dateBegin);
             const quotValidity = new Date(offer.chargeSet.quotValidity);
+            const departs = _.get(offer, 'routes[0].departs', []);
             const charges = _.filter(offer.chargeSet.charges, charge => charge.chargeType !== 'Source' || charge.type !== 'Incl');
 
             const fields = charges.map(charge => ({ 
@@ -87,6 +88,10 @@ function Server({ configuration = {}, serverUri = 'https://app.okargo.com/api/Ex
                     validFrom: `${dateBegin.getFullYear()}-${dateBegin.getMonth() + 1}-${dateBegin.getDate()}`,
                     validUntil: `${quotValidity.getFullYear()}-${quotValidity.getMonth() + 1}-${quotValidity.getDate()}`,
                     transitTime: offer.chargeSet.transitTime || 0,
+                    transitDates: departs.map(d => ({
+                        etd: d.etd.replace(/T\d\d:\d\d:\d\dZ/, ''),
+                        eta: d.eta.replace(/T\d\d:\d\d:\d\dZ/, ''),
+                    })),
                     sections
                 }
             }

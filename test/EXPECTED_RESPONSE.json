@@ -16,7 +16,8 @@
         {
             "id": "100",
             "type": "20' Dry", 
-            "quantity": 1 
+            "quantity": 1,
+            "dangerous": false
         },
         "attributes": {
             "okargoOffer": {
@@ -1357,6 +1358,10 @@
             "validFrom": "2024-1-7",
             "validUntil": "2024-1-17",
             "transitTime": 26,
+            "transitDates": [{
+                "etd":  "2024-01-12",
+                "eta":  "2024-01-12"
+            }],
             "sections": [{
                 "id": "138",
                 "title": "Freight",

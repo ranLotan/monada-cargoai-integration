@@ -44,7 +44,7 @@ async function run(server) {
     return server.run({
         sourcePort: { id: 'PTLEI' },
         destinationPort: { id: 'BRNVT' },
-        products: [{ type: '20\' Dry', quantity: 1 }],
+        products: [{ type: '20\' Dry', quantity: 1, dangerous: false }],
         dateBegin: '2024-01-01',
         dateEnd: '2024-02-01',
         platform: '5'
