@@ -50,6 +50,8 @@ function Server({ configuration = {}, serverUri = 'https://app.okargo.com/api/Ex
             const dateBegin = new Date(offer.chargeSet.dateBegin);
             const quotValidity = new Date(offer.chargeSet.quotValidity);
             const departs = _.get(offer, 'routes[0].departs', []);
+            const transShipments = _.get(offer, 'routes[0].transShipments', []);
+            const availability = (offer.ratesAvailabilitys || [])[0] || null;
             const charges = _.filter(offer.chargeSet.charges, charge => charge.chargeType !== 'Source' || charge.type !== 'Incl');
 
             const fields = charges.map(charge => ({ 
@@ -92,6 +94,11 @@ function Server({ configuration = {}, serverUri = 'https://app.okargo.com/api/Ex
                         etd: d.etd.replace(/T\d\d:\d\d:\d\dZ/, ''),
                         eta: d.eta.replace(/T\d\d:\d\d:\d\dZ/, ''),
                     })),
+                    availability: availability === null ? null : {
+                        available: availability.status === 'Available',
+                        count: availability.containerLeft || null,
+                    },
+                    transshipment: transShipments.map(t => t.unLocode).join(', '),
                     sections
                 }
             }

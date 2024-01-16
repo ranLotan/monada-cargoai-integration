@@ -1100,7 +1100,18 @@
                         }
                     ]
                 },
-                "ratesAvailabilitys": [],
+                "ratesAvailabilitys": [{
+                    "agreedAllocation": null,
+                    "chargeSetId": 35400645,
+                    "containerLeft": 25,
+                    "departId": null,
+                    "firmId": null,
+                    "ratesAvailabilityId": 6284372,
+                    "ratesOfferId": null,
+                    "sizeTypeId": null,
+                    "status": "Available",
+                    "usedAllocation": null
+                }],
                 "routes": [
                     {
                         "serviceCode": null,
@@ -1362,6 +1373,11 @@
                 "etd":  "2024-01-12",
                 "eta":  "2024-01-12"
             }],
+            "availability": {
+                "available": true,
+                "count": 25
+            },
+            "transshipment": "PTSIE",
             "sections": [{
                 "id": "138",
                 "title": "Freight",

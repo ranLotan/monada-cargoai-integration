@@ -1108,7 +1108,20 @@
                             }
                         ]
                     },
-                    "ratesAvailabilitys": [],
+                    "ratesAvailabilitys": [
+                        {
+                            "ratesAvailabilityId": 6284372,
+                            "agreedAllocation": null,
+                            "usedAllocation": null,
+                            "containerLeft": 25,
+                            "status": "Available",
+                            "sizeTypeId": null,
+                            "departId": null,
+                            "firmId": null,
+                            "chargeSetId": 35400645,
+                            "ratesOfferId": null
+                        }
+                    ],
                     "routes": [
                         {
                             "serviceCode": null,
