@@ -7,7 +7,7 @@ function ConfigurationErrorException() {}
 function InvalidTokenException() {}
 function TooManyRequestsException() {}
 
-function Server({ configuration = {}, serverUri = 'https://app.okargo.com/api/Export/v2/GetOnlineCarrierOffers', uuidv4 = _uuidv4 } = {}) {
+function Server({ configuration = {}, serverUri = 'https://app.okargo.com/api/Export/v2/GetOnlineCarrierOffers', uuidv4 = _uuidv4, now = () => new Date().getTime() } = {}) {
     const { token, platforms } = configuration;
 
     if (!token || !platforms) {
@@ -70,6 +70,7 @@ function Server({ configuration = {}, serverUri = 'https://app.okargo.com/api/Ex
 
             return {
                 id: `okargo-${offer.chargeSet.chargeSetId}`,
+                created: now(),
                 transportationMethod: 'sea',
                 source: sourcePort,
                 destination: destinationPort,
