@@ -52,7 +52,7 @@ function DetailsCard(props) {
                 );
             })}
             <Box sx={{ width: '100%', paddingBottom: '20px', borderTop: '1px solid #D9D9D9' }} />
-            <Box sx={{ fontSize: '13px' }}>
+            <Box sx={{ fontSize: '13px', whiteSpace: 'pre-wrap' }}>
                 {new Date(rate.offer.validFrom).getTime() > new Date().getTime() ? `Valid from: ${new Date(rate.offer.validFrom).toLocaleDateString('en-GB')}` : ''}
                 {new Date(rate.offer.validFrom).getTime() <= new Date().getTime() ? `Valid until: ${new Date(rate.offer.validUntil).toLocaleDateString('en-GB')}` : ''}
                 {' · '}
@@ -86,7 +86,7 @@ function OkargoSingleFieldDetails(props) {
         <Box
             sx={{ 
                 cursor: 'move', 
-                padding: '20px',
+                padding: '10px',
                 width: '100%', 
                 minWidth: '100%', 
                 marginBottom: '12px',
@@ -96,6 +96,8 @@ function OkargoSingleFieldDetails(props) {
             <Box
                 ref={drag} 
                 sx={{ 
+                    background: 'white',
+                    padding: '10px',
                     cursor: 'move', 
                     fontWeight: emphasize ? '800' : '400', 
                     display: 'flex', 
