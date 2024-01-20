@@ -54,8 +54,6 @@
     "peerDependencies": {
         "@emotion/react": "^11.11.3",
         "@emotion/styled": "^11.11.0",
-        "@fortawesome/pro-light-svg-icons": "^6.5.1",
-        "@fortawesome/pro-solid-svg-icons": "^6.5.1",
         "@fortawesome/react-fontawesome": "^0.2.0",
         "@monada-ai/monada-shipping-companies-logos": "*",
         "@mui/material": "^5.15.3",
