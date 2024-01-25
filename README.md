@@ -1,4 +1,4 @@
-# monada-okargo-integration
+# monada-cargoai-integration
 Integration components to connect Cargoai into the Monada application
 
 Server code can be tested using:
