@@ -10,91 +10,91 @@
             "id": "CDG"
         },
         "attributes": {
-            "cargoaiOffer":  
-            {
-                "flightUID": "4d38080f-b5e6-11ee-abe3-c64f13073046",
-                "airlineCode": "00",
-                "flightNumber": "00470",
-                "arrivalTime": "2024-01-31T14:00:01+01:00",
-                "arrivalAirport": "CDG",
-                "departureTime": "2024-01-31T10:00:01-05:00",
-                "departureAirport": "JFK",
-                "latestAcceptanceTime": "2024-01-31T05:00:01-05:00",
-                "timeOfAvailability": "2024-01-31T19:00:01+01:00",
-                "legs": [
-                  {
-                    "flightNumber": "00470",
-                    "arrivalTime": "2024-01-31T14:00:01+01:00",
-                    "arrivalAirport": "CDG",
-                    "departureTime": "2024-01-31T10:00:01-05:00",
-                    "departureAirport": "JFK",
-                    "bodyType": "Narrowbody",
-                    "aircraftCode": "I32",
-                    "co2": {
-                      "value": 153.18364203253566,
-                      "estimation": false
-                    }
-                  }
-                ],
-                "features": {
-                  "bookable": true,
-                  "awbOptional": true
-                },
-                "rates": [
-                  {
-                    "id": "4d380718-b5e6-11ee-abe3-c64f13073046",
-                    "name": "",
-                    "type": "live",
-                    "currency": "USD",
-                    "netRate": 1.87,
-                    "allInRate": 1.91,
-                    "total": 317.63,
-                    "minimumRate": false,
-                    "lastUpdatedDate": "",
-                    "charges": [
-                      {
-                        "label": "Security surcharge",
-                        "rate": 0.02,
-                        "type": "GROSS_WEIGHT",
-                        "code": "ssc",
-                        "minAmount": 0,
-                        "maxAmount": 0
-                      },
-                      {
-                        "label": "Fuel surcharge",
-                        "rate": 0.02,
-                        "type": "CHARGEABLE_WEIGHT",
-                        "code": "fsc",
-                        "minAmount": 0,
-                        "maxAmount": 0
-                      }
-                    ],
-                    "ocdc": [
-                      {
-                        "label": "Surface charges origin",
-                        "rate": 0.01,
-                        "type": "CHARGEABLE_WEIGHT",
-                        "code": "sco",
-                        "minAmount": 0,
-                        "maxAmount": 0
-                      }
-                    ],
-                    "handlingCodes": [
-                      "GCR"
-                    ],
-                    "coloaderOfficeId": 0
-                  }
-                ],
-                "available": true,
-                "awbPrefix": "000",
-                "awbPrefixes": [
-                  "000"
-                ], 
-                "airlineConditions": "\n\t1- Offer subject to capacity when booking.\n\t2- Quotation reference to be imperatively mentioned when booking.\n\t3- This quotation is valid for the packaging indicated only, in the event of modification, please make a new request to the sales department.\n\t4- Taxes (IRC – MYC – etc…) subject to change without notice.\n\t5- In the event of cancellation or no show, we reserve the right to pass on all or part of the costs\n\t- Cancellation 72 hours before the departure of the truck and/or the flight (working hours): invoicing 50% of the amount of the freight\n\t- Cancellation 48 hours before the departure of the truck and/or the flight (working hours): invoicing of 75% of the amount of the freight\n\t- Cancellation 24 hours before the departure of the truck and/or the flight (working hours): invoicing of 100% of the amount of the freight\n\t- In the case of a no show (no presentation of the freight): invoicing of 100% of the amount of the freight\n\t- In the case of a low show (discount less than 50% of the reserved taxable weight): invoicing of 75% of the reserved taxable weight\n",
-                "handlingInfoLink": "https://www.cargoai.co/terms",
-                "ghaName": "Mocked GHA",
-                "ghaAddress": "Airport road, Cargo Terminal, Mocked Cargo building"
-            }
+            "cargoaiOffer":
+			{
+			  "flightUID": "4d38080f-b5e6-11ee-abe3-c64f13073046",
+			  "airlineCode": "00",
+			  "flightNumber": "00470",
+			  "arrivalTime": "2024-01-31T14:00:01+01:00",
+			  "arrivalAirport": "CDG",
+			  "departureTime": "2024-01-31T10:00:01-05:00",
+			  "departureAirport": "JFK",
+			  "latestAcceptanceTime": "2024-01-31T05:00:01-05:00",
+			  "timeOfAvailability": "2024-01-31T19:00:01+01:00",
+			  "legs": [
+				{
+				  "flightNumber": "00470",
+				  "arrivalTime": "2024-01-31T14:00:01+01:00",
+				  "arrivalAirport": "CDG",
+				  "departureTime": "2024-01-31T10:00:01-05:00",
+				  "departureAirport": "JFK",
+				  "bodyType": "Narrowbody",
+				  "aircraftCode": "I32",
+				  "co2": {
+					"value": 153.18364203253566,
+					"estimation": false
+				  }
+				}
+			  ],
+			  "features": {
+				"bookable": true,
+				"awbOptional": true
+			  },
+			  "rates": [
+				{
+				  "id": "4d380718-b5e6-11ee-abe3-c64f13073046",
+				  "name": "",
+				  "type": "live",
+				  "currency": "USD",
+				  "netRate": 1.87,
+				  "allInRate": 1.91,
+				  "total": 317.63,
+				  "minimumRate": false,
+				  "lastUpdatedDate": "",
+				  "charges": [
+					{
+					  "label": "Security surcharge",
+					  "rate": 0.02,
+					  "type": "GROSS_WEIGHT",
+					  "code": "ssc",
+					  "minAmount": 0,
+					  "maxAmount": 0
+					},
+					{
+					  "label": "Fuel surcharge",
+					  "rate": 0.02,
+					  "type": "CHARGEABLE_WEIGHT",
+					  "code": "fsc",
+					  "minAmount": 0,
+					  "maxAmount": 0
+					}
+				  ],
+				  "ocdc": [
+					{
+					  "label": "Surface charges origin",
+					  "rate": 0.01,
+					  "type": "CHARGEABLE_WEIGHT",
+					  "code": "sco",
+					  "minAmount": 0,
+					  "maxAmount": 0
+					}
+				  ],
+				  "handlingCodes": [
+					"GCR"
+				  ],
+				  "coloaderOfficeId": 0
+				}
+			  ],
+			  "available": true,
+			  "awbPrefix": "000",
+			  "awbPrefixes": [
+				"000"
+			  ],
+			  "airlineConditions": "\n\t1- Offer subject to capacity when booking.\n\t2- Quotation reference to be imperatively mentioned when booking.\n\t3- This quotation is valid for the packaging indicated only, in the event of modification, please make a new request to the sales department.\n\t4- Taxes (IRC – MYC – etc…) subject to change without notice.\n\t5- In the event of cancellation or no show, we reserve the right to pass on all or part of the costs\n\t- Cancellation 72 hours before the departure of the truck and/or the flight (working hours): invoicing 50% of the amount of the freight\n\t- Cancellation 48 hours before the departure of the truck and/or the flight (working hours): invoicing of 75% of the amount of the freight\n\t- Cancellation 24 hours before the departure of the truck and/or the flight (working hours): invoicing of 100% of the amount of the freight\n\t- In the case of a no show (no presentation of the freight): invoicing of 100% of the amount of the freight\n\t- In the case of a low show (discount less than 50% of the reserved taxable weight): invoicing of 75% of the reserved taxable weight\n",
+			  "handlingInfoLink": "https://www.cargoai.co/terms",
+			  "ghaName": "Mocked GHA",
+			  "ghaAddress": "Airport road, Cargo Terminal, Mocked Cargo building"
+			}			
         },
 		"product": 
         {
@@ -115,7 +115,7 @@
                 "available": true,
                 "count": 0
             },
-            "transshipment": "",
+            "transShipment": "",
             "sections": [{
                 "id": "104",
                 "title": "Freight",
@@ -155,6 +155,228 @@
                         "type": "CHARGEABLE_WEIGHT",
                         "values": {
                             "100": {
+                                "value": 0.01,
+                                "currency": "USD"
+                            }
+                        }
+                    }]
+                }]
+            }]
+        }
+    },
+	{
+        "id": "cargoai-4d3ad6e2-b5e6-11ee-abe3-c64f13073046",
+        "created": 101010,
+        "transportationMethod": "air",
+        "source": {
+            "id": "JFK"
+        },
+        "destination": {
+            "id": "CDG"
+        },
+        "attributes": {
+            "cargoaiOffer":  
+			{
+			  "flightUID": "4d3ad6e2-b5e6-11ee-abe3-c64f13073046",
+			  "airlineCode": "00",
+			  "flightNumber": "00470-00707",
+			  "arrivalTime": "2024-02-03T06:00:01+01:00",
+			  "arrivalAirport": "CDG",
+			  "departureTime": "2024-02-02T13:00:01-05:00",
+			  "departureAirport": "JFK",
+			  "latestAcceptanceTime": "2024-02-02T08:00:01-05:00",
+			  "timeOfAvailability": "2024-02-03T11:00:01+01:00",
+			  "stops": 1,
+			  "legs": [
+				{
+				  "flightNumber": "00470",
+				  "arrivalTime": "2024-02-02T17:00:01+01:00",
+				  "arrivalAirport": "FNB",
+				  "departureTime": "2024-02-02T13:00:01-05:00",
+				  "departureAirport": "JFK",
+				  "bodyType": "Widebody",
+				  "aircraftCode": "333",
+				  "co2": {
+					"value": 138.66340500398658,
+					"estimation": false
+				  }
+				},
+				{
+				  "flightNumber": "00707",
+				  "arrivalTime": "2024-02-03T06:00:01+01:00",
+				  "arrivalAirport": "CDG",
+				  "departureTime": "2024-02-02T21:00:01+01:00",
+				  "departureAirport": "FNB",
+				  "bodyType": "Narrowbody",
+				  "aircraftCode": "DF9",
+				  "co2": {
+					"value": 14.9282854739064,
+					"estimation": false
+				  }
+				}
+			  ],
+			  "features": {
+				"bookable": true,
+				"awbOptional": true
+			  },
+			  "rates": [
+				{
+				  "id": "4d3ad5b5-b5e6-11ee-abe3-c64f13073046",
+				  "name": "",
+				  "type": "live",
+				  "currency": "USD",
+				  "netRate": 1.87,
+				  "allInRate": 1.91,
+				  "total": 317.63,
+				  "minimumRate": false,
+				  "lastUpdatedDate": "",
+				  "charges": [
+					{
+					  "label": "Fuel surcharge",
+					  "rate": 0.02,
+					  "type": "CHARGEABLE_WEIGHT",
+					  "code": "fsc",
+					  "minAmount": 0,
+					  "maxAmount": 0
+					},
+					{
+					  "label": "Security surcharge",
+					  "rate": 0.02,
+					  "type": "GROSS_WEIGHT",
+					  "code": "ssc",
+					  "minAmount": 0,
+					  "maxAmount": 0
+					}
+				  ],
+				  "ocdc": [
+					{
+					  "label": "Surface charges origin",
+					  "rate": 0.01,
+					  "type": "CHARGEABLE_WEIGHT",
+					  "code": "sco",
+					  "minAmount": 0,
+					  "maxAmount": 0
+					}
+				  ],
+				  "handlingCodes": [
+					"GCR"
+				  ],
+				  "coloaderOfficeId": 0
+				},
+				{
+				  "id": "4d3ad69d-b5e6-11ee-abe3-c64f13073046",
+				  "name": "",
+				  "type": "express",
+				  "currency": "USD",
+				  "netRate": 1.96,
+				  "allInRate": 2.01,
+				  "total": 333.66,
+				  "minimumRate": false,
+				  "lastUpdatedDate": "",
+				  "charges": [
+					{
+					  "label": "Fuel surcharge",
+					  "rate": 0.02,
+					  "type": "CHARGEABLE_WEIGHT",
+					  "code": "fsc",
+					  "minAmount": 0,
+					  "maxAmount": 0
+					},
+					{
+					  "label": "Security surcharge",
+					  "rate": 0.03,
+					  "type": "GROSS_WEIGHT",
+					  "code": "ssc",
+					  "minAmount": 0,
+					  "maxAmount": 0
+					}
+				  ],
+				  "ocdc": [
+					{
+					  "label": "Surface charges origin",
+					  "rate": 0.01,
+					  "type": "SHIPMENT",
+					  "code": "sco",
+					  "minAmount": 0,
+					  "maxAmount": 0
+					}
+				  ],
+				  "handlingCodes": [
+					"GCR"
+				  ],
+				  "coloaderOfficeId": 0
+				}
+			  ],
+			  "available": true,
+			  "awbPrefix": "000",
+			  "awbPrefixes": [
+				"000"
+			  ],
+			  "airlineConditions": "\n\t1- Offer subject to capacity when booking.\n\t2- Quotation reference to be imperatively mentioned when booking.\n\t3- This quotation is valid for the packaging indicated only, in the event of modification, please make a new request to the sales department.\n\t4- Taxes (IRC – MYC – etc…) subject to change without notice.\n\t5- In the event of cancellation or no show, we reserve the right to pass on all or part of the costs\n\t- Cancellation 72 hours before the departure of the truck and/or the flight (working hours): invoicing 50% of the amount of the freight\n\t- Cancellation 48 hours before the departure of the truck and/or the flight (working hours): invoicing of 75% of the amount of the freight\n\t- Cancellation 24 hours before the departure of the truck and/or the flight (working hours): invoicing of 100% of the amount of the freight\n\t- In the case of a no show (no presentation of the freight): invoicing of 100% of the amount of the freight\n\t- In the case of a low show (discount less than 50% of the reserved taxable weight): invoicing of 75% of the reserved taxable weight\n",
+			  "handlingInfoLink": "https://www.cargoai.co/terms",
+			  "ghaName": "Mocked GHA",
+			  "ghaAddress": "Airport road, Cargo Terminal, Mocked Cargo building"
+			}
+        },
+		"product": 
+        {
+            "id": "108",
+            "type": "20' Dry", 
+            "quantity": 1,
+            "dangerous": false
+        },
+        "offer": {
+            "validFrom": "",
+            "validUntil": "2024-2-2",
+            "transitTime": 11,
+            "transitDates": [{
+                "etd":  "2024-02-02",
+                "eta":  "2024-02-03"
+            }],
+            "availability": {
+                "available": true,
+                "count": 0
+            },
+            "transShipment": "FNB",
+            "sections": [{
+                "id": "112",
+                "title": "Freight",
+                "offers": [{
+                    "id": "113",
+                    "fields": [{
+						"id": "109",
+                        "title": "fsc",
+                        "type": "CHARGEABLE_WEIGHT",
+                        "values": {
+                            "108": {
+                                "value": 0.02,
+                                "currency": "USD"
+                            }
+                        }
+                    },
+                    {
+						"id": "110",
+                        "title": "ssc",
+                        "type": "GROSS_WEIGHT",
+                        "values": {
+                            "108": {
+                                "value": 0.02,
+                                "currency": "USD"
+                            }
+                        }
+                    }]
+                }]
+            },  {
+                "title": "Origin",
+                "id": "114",
+                "offers": [{
+                    "id": "115",
+                    "fields": [{
+                        "id": "111",
+                        "title": "sco",
+                        "type": "CHARGEABLE_WEIGHT",
+                        "values": {
+                            "108": {
                                 "value": 0.01,
                                 "currency": "USD"
                             }

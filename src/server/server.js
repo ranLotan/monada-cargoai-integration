@@ -60,8 +60,9 @@ function Server({ configuration = {}, serverUri = 'https://air-cargo-schedule-an
             const arrivalTime = new Date(flight.arrivalTime);
             const hoursDifference = (arrivalTime - departureTime) / parseFloat(60 * 60 * 1000);
             const quotValidity = new Date(flight.latestAcceptanceTime) // *is correct property?
-            const legs = flight.legs;
-            const transShipments = legs.length == 1 ? "" : legs.map(leg => leg.arrivalAirport).join(", ");
+            const legs = flight.legs.slice(0,-1);
+            const transShipments = legs.length == 0 ? "" : legs.map(leg => leg.arrivalAirport).join(", ");
+            // const transShipments = legs.length == 1 ? "" : legs.map(leg => leg.arrivalAirport).join(", ");
             const availability = flight.available && flight.features.bookable;
             
             // const rates = flight.rates.map(rate => ({ ...rate.ocdc, ...rate.charges}));
@@ -122,7 +123,7 @@ function Server({ configuration = {}, serverUri = 'https://air-cargo-schedule-an
                         available: availability,
                         count: 0
                     },
-                    transshipment: transShipments,
+                    transShipment: transShipments,
                     sections
                 }
             }   
