@@ -9,6 +9,9 @@
         "destination": {
             "id": "CDG"
         },
+		"supplier": {
+			"uniqueId": "00"
+		},
         "attributes": {
             "cargoaiOffer":
 			{
@@ -99,12 +102,28 @@
 		"product": 
         {
             "id": "100",
-            "type": "20' Dry", 
-            "quantity": 1,
-            "dangerous": false
+			"product": "GCR",
+			"pieces": 1,
+			"weight": 100,
+			"chargeableWeight": 167,
+			"volume": 1,
+			"dimensions": [
+				{
+					"pieces": 1,
+					"length": 100,
+					"width": 100,
+					"height": 100,
+					"weight": 100,
+					"stackable": true,
+					"tiltable": false,
+					"toploadable": true,
+					"weightType": "PER_ITEM",
+					"loadType": "DIMENSIONS"
+				}
+			]
         },
         "offer": {
-            "validFrom": "",
+            "validFrom": 101010,
             "validUntil": "2024-1-31",
             "transitTime": -2,
             "transitDates": [{
@@ -115,7 +134,7 @@
                 "available": true,
                 "count": 0
             },
-            "transShipment": "",
+            "transShipment": null,
             "sections": [{
                 "id": "104",
                 "title": "Freight",
@@ -174,6 +193,9 @@
         "destination": {
             "id": "CDG"
         },
+		"supplier": {
+			"uniqueId": "00"
+		},
         "attributes": {
             "cargoaiOffer":  
 			{
@@ -321,12 +343,28 @@
 		"product": 
         {
             "id": "108",
-            "type": "20' Dry", 
-            "quantity": 1,
-            "dangerous": false
+			"product": "GCR",
+			"pieces": 1,
+			"weight": 100,
+			"chargeableWeight": 167,
+			"volume": 1,
+			"dimensions": [
+				{
+					"pieces": 1,
+					"length": 100,
+					"width": 100,
+					"height": 100,
+					"weight": 100,
+					"stackable": true,
+					"tiltable": false,
+					"toploadable": true,
+					"weightType": "PER_ITEM",
+					"loadType": "DIMENSIONS"
+				}
+			]
         },
         "offer": {
-            "validFrom": "",
+            "validFrom": 101010,
             "validUntil": "2024-2-2",
             "transitTime": 11,
             "transitDates": [{
